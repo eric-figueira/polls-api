@@ -8,7 +8,7 @@ services:
       - POSTGRES_PASSWORD=docker
       - POSTGRES_DB=polls
     volumes:
-      - polls_postgres_data:/bitnami/postgresql
+      - postgres:/bitnami/postgresql
 
   redis:
     image: bitnami/redis:latest
@@ -17,8 +17,8 @@ services:
     ports:
       - '6379:6379'
     volumes:
-      - 'polls_redis_data:/bitnami/redis/data'
+      - 'redis:/bitnami/redis/data'
 
 volumes:
-  polls_postgres_data:
-  polls_redis_data:
+  postgres:
+  redis:
