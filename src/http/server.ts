@@ -1,5 +1,5 @@
-import fastify from 'fastify'
 import cookie from '@fastify/cookie'
+import fastify from 'fastify'
 import { createPoll } from './routes/create-poll.js'
 import { getPoll } from './routes/get-poll.js'
 import { voteOnPoll } from './routes/vote-on-poll.js'

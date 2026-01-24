@@ -1,7 +1,7 @@
-import type { FastifyInstance } from "fastify";
-import z from "zod";
-import { randomUUID } from "node:crypto"
-import { prisma } from "../../lib/prisma.js";
+import type { FastifyInstance } from 'fastify'
+import { randomUUID } from 'node:crypto'
+import z from 'zod'
+import { prisma } from '../../lib/prisma.js'
 
 export async function voteOnPoll(app: FastifyInstance) {
   app.post('/polls/:pollId/votes', async (request, response) => {
